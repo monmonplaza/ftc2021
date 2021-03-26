@@ -1,0 +1,114 @@
+.search {
+  padding: 5rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.faq {
+  &__wrapper {
+    padding: 6rem 0;
+  }
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  // &__inner {
+  //   max-width: 89rem;
+  //   margin: 0 auto;
+  // }
+
+  position: relative;
+
+  .qna {
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include media-query(520px) {
+      grid-template-columns: 1fr;
+    }
+    grid-gap: 3rem;
+    h2 {
+      border-bottom: 1px solid darken($light-color, 5);
+    }
+    &__block {
+      margin-bottom: 1.5rem;
+
+      h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+        color: #8a8a8a;
+      }
+      .answer {
+        font-size: 1.4rem;
+        max-height: 0;
+        height: auto;
+        transition: max-height 0.3s ease-out;
+        overflow: hidden;
+        ul {
+          list-style: disc;
+          li {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+
+    &__block.isOpen {
+      padding: 1rem;
+      background-color: #f1f1f1;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+      h3 {
+        color: $primary-color;
+        font-weight: bold;
+      }
+      .answer {
+        max-height: 40rem;
+      }
+    }
+  }
+}
+
+.go_to_contact {
+  padding: 7rem 1.5rem 3rem 1.5rem;
+  text-align: center;
+  background-color: #f1f1f1;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+  :is(input, textarea) {
+    padding: 1.2rem 1.2rem;
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #b4b4b4;
+    outline: none;
+    margin-bottom: 1rem;
+    width: 45rem;
+    @include media-query(520px) {
+      width: 100%;
+    }
+  }
+  input[type="submit"] {
+    padding: 1.2rem 2.8rem;
+    color: $light-color;
+    background-color: $secondary-color;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($secondary-color, 20);
+    }
+  }
+  .ajax-loader {
+    display: block !important;
+  }
+}

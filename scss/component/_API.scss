@@ -1,0 +1,138 @@
+.children__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  padding: 5rem 0;
+  grid-gap: 1rem;
+  position: relative;
+  min-height: 408px;
+  .child__item {
+    position: relative;
+    background-color: $dark-color;
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    &__info {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .infobox {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+
+      .inner__info {
+        h2 {
+          color: $light-color;
+          margin-bottom: 0;
+        }
+        a {
+          color: #fc9726;
+          transition: 0.5s ease;
+        }
+      }
+
+      .btn--help {
+        display: flex;
+        background-color: #3f9cd1;
+        align-self: center;
+        align-items: center;
+        border: none;
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.5s ease;
+        img {
+          width: unset;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+  .donation__bar {
+    background-color: #ffba5f;
+    position: relative;
+    min-height: 3.5rem;
+    p {
+      position: relative;
+      z-index: 2;
+      font-weight: bold;
+      padding: 1rem;
+      margin: 0;
+      font-size: 1.6rem;
+      color: #fff;
+    }
+    &__percent {
+      position: absolute;
+      height: 100%;
+      width: 20%;
+      background-color: #e98400;
+    }
+  }
+}
+
+$offset: 187;
+$duration: 2s;
+.preloader__wrapper {
+  position: absolute;
+  z-index: 99999;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 408px;
+}
+.preloader__wrapper.show {
+  display: flex;
+}
+
+.spinner {
+  animation: rotator $duration linear infinite;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+.path {
+  stroke-dasharray: $offset;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash $duration ease-in-out infinite,
+    colors ($duration * 3) ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% {
+    stroke: #4285f4;
+  }
+
+  100% {
+    stroke: #4285f4;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: $offset;
+  }
+  50% {
+    stroke-dashoffset: $offset/4;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: $offset;
+    transform: rotate(450deg);
+  }
+}

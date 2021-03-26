@@ -1,0 +1,50 @@
+.main-login {
+  .main-login-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+      url("../img/main-banner.jpg");
+    background-position: center center;
+    h1 {
+      max-width: 50rem;
+      color: $light-color;
+      font-family: $light-font;
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+
+  .login-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    h2 {
+      margin-bottom: 3rem;
+    }
+    form {
+      max-width: 40rem;
+      padding: 4rem 2rem;
+      background-color: $gray-color;
+      box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
+    }
+    .cannot-login {
+      padding: 1rem 0;
+      font-size: 1.4rem;
+      text-align: right;
+      a {
+        font-size: 1.4rem;
+      }
+    }
+    .login-footer {
+      font-size: 1.2rem;
+    }
+  }
+
+  .new-sponsor {
+    text-align: center;
+    margin: 3rem 0 2rem;
+  }
+}

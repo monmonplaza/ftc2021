@@ -1,0 +1,153 @@
+.sponsor-child-process {
+  padding: 50px 0;
+  h1 {
+    color: $secondary-color;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba($dark-color, 0.4);
+  }
+}
+
+.childlist-item {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  border: 1px solid lighten($dark-color, 40%);
+  margin-bottom: 20px;
+  &-img {
+    flex: 0 0 30%;
+    margin-right: 30px;
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    a {
+      color: $dark-color;
+    }
+  }
+
+  &-info {
+    flex: 0 0 65%;
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: -1rem;
+      line-height: 1.2;
+      color: $primary-color;
+      span {
+        font-size: 1.4rem;
+        line-height: 1;
+      }
+    }
+
+    h4 {
+      margin-bottom: 10px;
+    }
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.sponsor-summary {
+  &-header,
+  &-item,
+  &-total {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0.5rem;
+    li {
+      flex: 0 0 33.3%;
+      padding: 10px;
+    }
+
+    li:nth-child(2) {
+      text-align: center;
+    }
+    li:last-child {
+      text-align: right;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-header {
+    background-color: $primary-color;
+    color: $light-color;
+    text-transform: uppercase;
+  }
+
+  &-item {
+    li {
+      margin-bottom: 0.5rem;
+      input {
+        padding: 0.5 rem;
+        border: none;
+        background: transparent;
+      }
+    }
+  }
+
+  &-item:nth-child(odd) {
+    background-color: #f8f8f8;
+  }
+
+  &-item li:not(:last-child) {
+    border-right: 1px solid rgba($dark-color, 0.4);
+  }
+
+  &-total {
+    border-top: 1px solid rgba($dark-color, 0.4);
+    border-bottom: 1px solid rgba($dark-color, 0.4);
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
+.select-sponsor-payment ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-sponsor-payment ul li {
+  margin: 0 1rem;
+  text-align: center;
+}
+
+.select-sponsor-payment ul li a {
+  width: 15rem;
+}
+
+.active-sponsor-payment {
+  background-color: $primary-color;
+}
+
+#creditCardSection {
+  display: none;
+  margin-top: 2rem;
+  button {
+    margin-top: 2rem;
+    max-width: 50.8rem;
+  }
+}
+
+.select-sponsor-payment {
+  margin-top: 4rem;
+}
+
+.active-payment {
+  background-color: $secondary-color;
+}

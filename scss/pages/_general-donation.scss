@@ -1,0 +1,42 @@
+.general-donation {
+  max-width: 90rem;
+  margin: 4rem auto;
+}
+
+.step {
+  padding: 3rem;
+  border: 1px solid $dark-color;
+  margin-bottom: 3rem;
+}
+
+.step.step-1 ul {
+  display: flex;
+  justify-content: center;
+  li {
+    margin: 0 1rem;
+  }
+}
+
+.step.step-3 ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  &:last-child {
+    padding: 1.5rem 0;
+    border-top: dotted 1px $dark-color;
+  }
+}
+
+// BTN ACTIVE!! //
+
+.gen-donation-form {
+  display: none;
+}
+
+.active-gen-form {
+  display: block;
+}
+
+.active-gen-btn {
+  background-color: $secondary-color;
+}

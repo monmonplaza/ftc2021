@@ -1,0 +1,33 @@
+.whatwedo__intro {
+  max-width: 82rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.grid__two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  @include media-query(420px) {
+    grid-template-columns: 1fr;
+  }
+  margin-bottom: 3rem;
+  .wrapper {
+    padding: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  .grid__item.content {
+    align-self: center;
+  }
+}
+
+.content-img {
+  .grid__item.content {
+    @include media-query(420px) {
+      order: 1;
+    }
+  }
+}
