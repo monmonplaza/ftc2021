@@ -1,22 +1,18 @@
-
-
-
-
 <?php get_header() ?>
 <section class="banner">
-      <div class="container">
-        <div class="banner-content">
-          <h1>
-            Make a <span class="text-bold">difference</span> in<br />
-            the lives of<span class="text-bold"> street<br />children</span>
-          </h1>
+  <div class="container">
+    <div class="banner-content">
+      <h1>
+        Make a <span class="text-bold">difference</span> in<br />
+        the lives of<span class="text-bold"> street<br />children</span>
+      </h1>
 
-          <a href="<?php echo esc_url(site_url('children'))?>" class="btn bg-primary">
-            Sponsor Now</a
-          >
-        </div>
-      </div>
-    </section>
+      <a href="<?php echo esc_url(site_url('children'))?>" class="btn bg-primary">
+        Sponsor Now</a
+      >
+    </div>
+  </div>
+</section>
 
     <section class="quick-sponsor">
       <div class="container">
@@ -24,15 +20,6 @@
           Let's <span class="text-bold">Share to Change </span>a life today
         </h2>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-          molestias rerum harum possimus explicabo incidunt, fuga magni quos
-          aliquam ab!
-        </p>
-        <div class="text-center">
-          <!-- <a href="#" class="btn bg-primary">Sponsor Now</a> -->
-          <a href="<?php echo esc_url(site_url('children'))?>" class="btn bg-secondary">View All Kids</a>
-        </div>
 
         <div class="children__list">
           <div class="preloader__wrapper show">
@@ -41,7 +28,15 @@
            </svg>
 		    	</div>
         </div>
-    
+
+        <div class="no__child text-center">
+            <img src="<?php echo get_template_directory_uri() ?>/img/missing_child.svg" alt="Missing Child">
+            <p>There is a problem on loading the child list</p>
+          </div>
+        <div class="text-center">
+          <!-- <a href="#" class="btn bg-primary">Sponsor Now</a> -->
+          <a href="https://demo.frontlinebusiness.com.ph/ftc-staging/children-list" class="btn bg-secondary">View All Kids</a>
+        </div>
     </section>
 
     <section class="ftc-provide">

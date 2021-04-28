@@ -66,37 +66,59 @@ function fetchChildren() {
   let outputHTML;
   let childList = document.querySelector(".children__list");
   let spinner = document.querySelector(".preloader__wrapper");
+  let noChild = document.querySelector(".no__child");
   fetch(
     "https://demo.frontlinebusiness.com.ph/dev/ftc2021/ftc/rest/server/stripe/products/list-products.php"
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(Object.values(data));
-      Object.values(data)[1]
-        .slice(0, 2)
-        .map(function (child) {
-          outputHTML = `
-        <div class="child__item">
-        <img src="http://localhost/ftc/wp-content/uploads/2021/03/noPhoto.jpg" alt="" />
-        
-         <div class="child__item__info">
-          <div class="infobox">
-              <div class="inner__info"> 
-                <h2>${child.name}</h2>
-                <a href="#">View info</a>
-              </div>
-              <a href="" class="btn--help">Help <img src="http://localhost/ftc/wp-content/uploads/2021/03/icon_arrow-right.png"/></a>
-          </div>
-          <div class="donation__bar">
-            <div class="donation__bar__percent"></div>
-            <p>20% - sponsored</p>
-          </div>
-         </div>   
-        </div>
-      `;
+      console.log(data)
+	  if(Object.values(data)[1].length <= 0) {
+		  noChild.style.display = "block"
+		  spinner.classList.remove("show");
+      childList.style.display = "none"
+	  } else {
+		   //loop child start
+       childList.style.display = "grid"
+       noChild.style.display = "none"
+		Object.values(data)[1].slice(0, 9).map(function (child) {
+		 if(child.metadata.class == 'resident') {
+         let photo = "";
+         if(child.metadata.photo === "na" ) {
+            photo = `https://demo.frontlinebusiness.com.ph/dev/ftc2021/ftc/images/no-photo.jpg`;
+         } else {
+           photo = `https://demo.frontlinebusiness.com.ph/dev/ftc2021/ftc/images/${child.metadata.photo}`;
+         }
+
+         console.log(photo);
+			   outputHTML = `
+					<div class="child__item">
+					<img src="${photo}" alt="${child.metadata.photo}" />
+
+					 <div class="child__item__info">
+					  <div class="infobox">
+						  <div class="inner__info"> 
+							  <h2>${child.name}</h2>
+						  </div>
+					  </div>
+					 </div>   
+					</div>
+				  `;
+		 } else {
+			 outputHTML = "";
+		 }	 
           spinner.classList.remove("show");
           childList.innerHTML += outputHTML;
         });
+	  //loop child end  
+	  }
+
+	  
+			  
     })
-    .catch((error) => "Something when wrong!");
+    .catch((error) => {
+     return error = `
+  
+    `
+    });
 }

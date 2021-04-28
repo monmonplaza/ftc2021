@@ -29,6 +29,11 @@
   background: {
     position: right center;
   }
+
+  @include media-query(420px) {
+    background:linear-gradient(to right, rgba(22,53,70,1) 100%, rgba(43,106,139,0.5))!important;
+    display: none;
+  }
   margin-bottom: 6rem;
   h2 {
     font-size: 4rem;

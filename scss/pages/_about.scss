@@ -46,3 +46,20 @@
     height: auto;
   }
 }
+
+
+.about {
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+  &-griditem {
+
+    img {
+      margin-bottom: 0;
+      display: block;
+
+    }
+  }
+}

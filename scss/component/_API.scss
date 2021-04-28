@@ -136,3 +136,17 @@ $duration: 2s;
     transform: rotate(450deg);
   }
 }
+
+
+.no__child {
+  display: none;
+  p {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  img {
+    width: 20rem;
+  }
+}
+
