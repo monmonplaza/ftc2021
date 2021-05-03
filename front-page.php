@@ -1,42 +1,36 @@
 <?php get_header() ?>
 <section class="banner">
   <div class="container">
-    <div class="banner-content">
-      <h1>
-        Make a <span class="text-bold">difference</span> in<br />
-        the lives of<span class="text-bold"> street<br />children</span>
-      </h1>
+    <div class="banner-wrapper">
+      <div class="banner-content">
+        <h1>
+          Make a <span class="text-bold">difference</span> in<br />
+          the lives of<span class="text-bold"> street<br />children</span>
+        </h1>
 
-      <a href="<?php echo esc_url(site_url('children'))?>" class="btn bg-primary">
-        Sponsor Now</a
-      >
+        <a href="<?php echo esc_url(site_url('children'))?>" class="btn bg-primary">
+          Sponsor Now</a
+        >
+      </div>
     </div>
+
   </div>
 </section>
+    
 
-    <section class="quick-sponsor">
+    <section class="sponsor-link">
       <div class="container">
         <h2 class="primary-header text-center">
-          Let's <span class="text-bold">Share to Change </span>a life today
+            Let's Share to Change a life today
         </h2>
-
-
-        <div class="children__list">
-          <div class="preloader__wrapper show">
-				   <svg class="spinner" width="60px" height="60px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-      		  <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30" ></circle>
-           </svg>
-		    	</div>
+        <a href="https://demo.frontlinebusiness.com.ph/ftc-staging/children-list">
+        <div class="img-link">
+          <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/k-91-ake-2658_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=155f0cf5ba1fedf1e7df29dd65bbe8b3" alt="">
+         
+            <a href="https://demo.frontlinebusiness.com.ph/ftc-staging/children-list" class="goto-sponsor">Continue Sponsorship <img class="arrow" src="<?php echo get_template_directory_uri() ?>/img/arrow.svg" alt=""></a>
         </div>
-
-        <div class="no__child text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/missing_child.svg" alt="Missing Child">
-            <p>There is a problem on loading the child list</p>
-          </div>
-        <div class="text-center">
-          <!-- <a href="#" class="btn bg-primary">Sponsor Now</a> -->
-          <a href="https://demo.frontlinebusiness.com.ph/ftc-staging/children-list" class="btn bg-secondary">View All Kids</a>
-        </div>
+      </div>
+      </a>
     </section>
 
     <section class="ftc-provide">

@@ -1,40 +1,43 @@
-// .banner-sm {
-//   height: 50vh;
-//   width: 100%;
-//   background: {
-//     image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
-//       url("../img/main-banner.jpg");
-//     size: cover;
-//     repeat: no-repeat;
-//   }
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-//   .banner-content-sm {
-//     color: $light-color;
-//     h1 {
-//       font-size: 5rem;
-//       font-weight: 300;
-//     }
-//   }
-// }
 
 .banner-sm {
   width: 100%;
-  min-height: 23rem;
+  min-height: 30rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   color: $light-color;
+  padding: 2rem;
+  // margin-bottom: 2rem;
   background: {
-    position: right center;
+    position: right 100px;
+    repeat: no-repeat;
+    size: cover;
   }
 
   @include media-query(420px) {
-    background:linear-gradient(to right, rgba(22,53,70,1) 100%, rgba(43,106,139,0.5))!important;
-    display: none;
+    min-height: 23rem;
+    align-items: flex-end;
+    background: {
+      image: linear-gradient(rgba(22,53,70,.9), rgba(43,106,139,0.9)),
+         url("../img/banner-sm.jpg")!important;
+      position: right center;
+    }
   }
-  margin-bottom: 6rem;
+  
+    &-wrapper {
+      display: flex;
+      align-items: flex-end;
+      padding-top: 15rem;
+      padding-bottom: 2rem;
+      
+      @include media-query(420px) {
+        justify-content: center;
+        min-height: inherit;
+        padding-top: 0rem;
+      }
+    }
+  
+
   h2 {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -46,5 +49,11 @@
   h3 {
     font-size: 2rem;
     font-weight: 400;
+  }
+}
+
+.banner-sm.lg-only {
+  @include media-query(420px) {
+    display: none;
   }
 }

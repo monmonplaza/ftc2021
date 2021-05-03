@@ -155,6 +155,11 @@ h5 {
 }
 
 .primary-header {
-  font-size: 4rem;
-  font-family: $light-font;
+  font-size: 3rem;
+  font-family: $bold-font;
+  margin-bottom: 2rem;
+  
+  @include media-query(420px) {
+    font-size: 2.5rem;
+  }
 }

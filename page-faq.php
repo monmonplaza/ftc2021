@@ -14,7 +14,6 @@
         <div class="faq__wrapper">
 			<div class="faq__header">
 				<h2>How can we help you?</h2>
-				<p>Browse through the most fequently asked questions to us</p>
 			</div>
 			
             <div class="faq__inner">

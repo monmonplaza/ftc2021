@@ -11,8 +11,6 @@
 
 <section class="gridboxes py-5">
   <div class="container">
-    <h2 class="primary-header text-center">Life Writes Its <span class="text-bold"> Own Stories </span></h2>
-      <p class="text-center mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident molestias rerum harum.</p>
       <div class="row">
         <?php
         $currentPage = get_query_var('paged');

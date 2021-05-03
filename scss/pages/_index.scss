@@ -7,24 +7,34 @@
     repeat: no-repeat;
   }
   width: 100%;
-  height: 70vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   @include media-query($sm-screen) {
     height: 50vh;
   }
 
-  .banner-content {
-    // margin-left: 20rem;
-    margin-bottom: 7rem;
+  &-wrapper {
+    display: flex;
+    height: 70vh;
+    align-items: center;
+    @include media-query(420px) {
+      width: 100%;
+      height: 60vh;
+    }
+  }
+  &-content {
+    padding-top: 5rem;
+    @include media-query(780px) {
+      text-align: center;
+    }
+    @include media-query(420px) {
+      padding-top: 0rem;
+    }
     h1 {
       font-size: 7rem;
       font-family: $light-font;
       color: $light-color;
       line-height: 1.1;
       @include media-query($sm-screen) {
-        font-size: 5rem;
+        font-size: 4.3rem;
       }
     }
   }
@@ -32,45 +42,47 @@
 
 // index kid list
 
-.quick-sponsor {
-  padding: 5rem 0;
+// .quick-sponsor {
+//   padding: 5rem 0;
 
-  &-box {
-    position: relative;
-    background-color: $dark-color;
-    overflow: hidden;
-    margin-bottom: 2rem;
-    &-img img {
-      display: block;
-      width: 100%;
-      height: 35rem;
-      object-fit: cover;
-      object-position: center;
-      transition: all 0.5s ease;
-    }
-    &-content {
-      position: absolute;
-      left: 0;
-      bottom: -15rem;
-      padding: 1rem;
-      transition: all 0.5s ease;
-    }
-    h4 {
-      color: $light-color;
-      font-size: 2rem;
-      margin-bottom: 0;
-    }
-    p {
-      color: $light-color;
-    }
-    &:hover img {
-      opacity: 0.7;
-    }
-    &:hover .quick-sponsor-box-content {
-      bottom: 0;
-    }
-  }
-}
+//   &-box {
+//     position: relative;
+//     background-color: $dark-color;
+//     overflow: hidden;
+//     margin-bottom: 2rem;
+//     &-img img {
+//       display: block;
+//       width: 100%;
+//       height: 35rem;
+//       object-fit: cover;
+//       object-position: center;
+//       transition: all 0.5s ease;
+//     }
+//     &-content {
+//       position: absolute;
+//       left: 0;
+//       bottom: -15rem;
+//       padding: 1rem;
+//       transition: all 0.5s ease;
+//     }
+//     h4 {
+//       color: $light-color;
+//       font-size: 2rem;
+//       margin-bottom: 0;
+//     }
+//     p {
+//       color: $light-color;
+//     }
+//     &:hover img {
+//       opacity: 0.7;
+//     }
+//     &:hover .quick-sponsor-box-content {
+//       bottom: 0;
+//     }
+//   }
+// }
+
+
 
 .ftc-provide {
   padding: 5rem 0;
@@ -107,21 +119,90 @@
   }
 }
 
-.quick-donation-services {
-  text-align: center;
-  max-width: 65rem;
-  ul {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    li {
-      text-align: center;
-      color: $light-color;
+// .quick-donation-services {
+//   text-align: center;
+//   max-width: 65rem;
+//   ul {
+//     display: flex;
+//     justify-content: space-around;
+//     width: 100%;
+//     li {
+//       text-align: center;
+//       color: $light-color;
 
-      p {
-        font-size: 2rem;
-        margin-top: -1rem;
+//       p {
+//         font-size: 2rem;
+//         margin-top: -1rem;
+//       }
+//     }
+//   }
+// }
+
+.sponsor-link {
+  padding: 5rem 0;
+
+  
+
+  .img-link {
+    background-color:$dark-color;
+    display: block;
+    position: relative;
+
+    .goto-sponsor {
+      position: absolute;
+      right: 4rem;
+      bottom: 2rem;
+      opacity: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: $light-color;
+      transition: .5s ease;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      line-height: 0;
+      @include media-query($sm-screen) {
+        right: 5rem;
+        
+      }
+      img.arrow {
+        width: 1.8rem;
+        height: 1.8rem;
+        opacity: 0;
+        padding-left: .5rem;
+        transition: all ease .5s;
+      }
+      &:hover {
+      transform: translateX(-2rem);
+      color: lighten($primary-color,5);
+      }
+      &:hover img {
+        transform: translateX(1rem);
+        opacity: 1;
+        
       }
     }
+    img {
+      position: relative;
+      transition: opacity .5s ease;
+      width: 100%;
+      height: 50rem;
+      object-fit: cover;
+      display: block;
+
+      @include media-query($sm-screen) {
+        height: 25rem;
+      }
+     
+    }
+    &:hover img {
+      opacity: .4;
+    }
+    &:hover .goto-sponsor {
+      opacity: 1;
+    }
   }
-}
+}  
+
+
