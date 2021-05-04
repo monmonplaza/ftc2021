@@ -25,7 +25,7 @@
         </h2>
         <a href="https://demo.frontlinebusiness.com.ph/ftc-staging/children-list">
         <div class="img-link">
-          <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/k-91-ake-2658_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=155f0cf5ba1fedf1e7df29dd65bbe8b3" alt="">
+          <img src="<?php echo get_template_directory_uri()?>/img/ftc-sponsor-banner.jpg" alt="">
          
             <a href="https://demo.frontlinebusiness.com.ph/ftc-staging/children-list" class="goto-sponsor">Continue Sponsorship <img class="arrow" src="<?php echo get_template_directory_uri() ?>/img/arrow.svg" alt=""></a>
         </div>
@@ -39,18 +39,18 @@
           <div class="row">
             <div class="col-md-5">
               <div class="ftc-provide-content">
-                <h2>Lorem ipsum dolor sit.</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Praesentium molestias temporibus libero id, nihil eos error
-                  quis et, iusto fuga modi excepturi dignissimos quas voluptates
-                  quia vitae ut nesciunt natus.
-                </p>
+               <?php if(have_posts()) : while(have_posts()) : the_post();
 
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Fugit, consectetur deserunt minus ut at deleniti?
-                </p>
+                     the_content(); 
+               ?>
+                 
+
+               <?php endwhile;
+                else :
+                  echo "No content to load.";
+                
+              endif;
+               ?>
               </div>
             </div>
             <div class="col-md-7">

@@ -1416,6 +1416,12 @@ h5 {
   padding: 2rem 0;
 }
 
+@media screen and (max-width: 780px) {
+  .header__main .wrapper ul li {
+    padding: 1rem 0;
+  }
+}
+
 .header__main .wrapper ul li a {
   color: #242424;
 }
@@ -2005,8 +2011,7 @@ nav.active {
 }
 
 .banner {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url("../img/main-banner.jpg");
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/main-banner.jpg");
+  background-image: linear-gradient(70deg, rgba(0, 34, 53, 0.7) 30%, rgba(0, 0, 0, 0)), url("../img/main-banner.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2067,9 +2072,13 @@ nav.active {
 
 .ftc-provide {
   padding: 5rem 0;
-  color: #ffffff;
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(60%, rgba(6, 40, 59, 0.9)), to(rgba(36, 36, 36, 0))), url("../img/main-banner.jpg");
-  background-image: linear-gradient(to left, rgba(6, 40, 59, 0.9) 60%, rgba(36, 36, 36, 0)), url("../img/main-banner.jpg");
+  color: #242424;
+}
+
+@media screen and (max-width: 780px) {
+  .ftc-provide {
+    padding: 0 0 5rem 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -2094,7 +2103,8 @@ nav.active {
 }
 
 .ftc-provide-icon ul li h4 {
-  font-weight: 400;
+  font-weight: 600;
+  color: #2a739c;
 }
 
 .ftc-provide-icon ul li svg {

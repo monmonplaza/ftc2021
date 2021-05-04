@@ -143,6 +143,9 @@
             margin-left: 2rem;
             position: relative;
             padding: 2rem 0;
+            @include media-query(780px) {
+              padding: 1rem 0;
+            }
             a {
               color: $dark-color;
               &:hover {
